@@ -9,9 +9,9 @@
     <!-- ! SCRIPTS -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="box-border">
+  <body class="box-border victor-mono">
     <!-- ! Navbar -->
-    <nav class="max-w-lg">
+    <nav class="max-w-[1024px] flex justify-end p-5 px-5">
       <!-- ! Dark/Light mode btn -->
       <button class="bg-transparent border-none outline-none">
         <svg
@@ -29,11 +29,11 @@
     </nav>
 
     <!-- ! Header -->
-    <header class="">
+    <header class="max-w-[1024px] flex justify-center items-center">
       <!-- ! Profile and handles -->
-      <section class="">
+      <section class="flex flex-col gap-y-4">
         <!-- ! Profile -->
-        <div class="">
+        <div class="flex justify-center items-center">
           <img
             src="https://picsum.photos/800"
             alt=""
@@ -42,13 +42,13 @@
         </div>
 
         <!-- ! Name and role -->
-        <div class="">
-          <h1 class="">Rajab Kabeer</h1>
-          <p class="">Web developer</p>
+        <div class="text-center">
+          <h1 class="text-xl font-bold">Rajab Kabeer</h1>
+          <p class="text-sm">Web developer</p>
         </div>
 
         <!-- ! Social handles -->
-        <div class="">
+        <div class="flex justify-center items-center gap-x-3">
           <!-- ! Instagram -->
           <a href="" class="" id="">
             <svg
@@ -91,6 +91,15 @@
               ></path>
             </svg>
           </a>
+        </div>
+
+        <!-- ! Bio -->
+        <div class="">
+          <p class="text-xs text-[#cdcdcd] font-bold">BIO</p>
+          <p class="">
+            I build fun stuff with code 🧑‍💻! <br />
+            Loves Math 🥧 Aspiring ML engineer 🧑‍🔬
+          </p>
         </div>
       </section>
     </header>
