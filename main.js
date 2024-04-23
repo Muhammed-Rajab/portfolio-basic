@@ -34,7 +34,7 @@ sectionSelectorBtns.forEach((btn) => {
   });
 });
 
-document.querySelector("#gallery-btn").click();
+// document.querySelector("#gallery-btn").click();
 
 // * Work cards animation
 const workCards = [...document.querySelectorAll(".work-card")];
