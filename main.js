@@ -37,7 +37,9 @@ sectionSelectorBtns.forEach((btn) => {
 
 document.querySelector("#gallery-btn").click();
 
-// * Work cards animation
+/*******************
+ * * WORK SECTION
+ *******************/
 const workCards = [...document.querySelectorAll(".work-card")];
 
 workCards.forEach((card) => {
@@ -64,7 +66,10 @@ workCards.forEach((card) => {
   });
 });
 
-// * Gallery Card adding
+/*******************
+ * * GALLERY SECTION
+ *******************/
+
 const gallery = [
   { url: "/public/gallery/1.jpg", size: "wide", igUrl: "" },
   { url: "/public/gallery/2.jpg", size: "tall", igUrl: "" },
@@ -87,17 +92,10 @@ const gallerySection = document.querySelector("#gallery-section");
 
 gallery.forEach((obj) => {
   const card = generateGalleryCard(obj.url, "wide");
-  gallerySection.appendChild(card);
-});
-
-// * Hover animation to gallery details
-const galleryCards = document.querySelectorAll(".gallery-card");
-
-galleryCards.forEach((card) => {
-  const detailsCard = card.querySelector(".gallery-card-detail");
+  const cardDetails = card.querySelector(".gallery-card-detail");
 
   card.addEventListener("mouseenter", () => {
-    gsap.to(detailsCard, {
+    gsap.to(cardDetails, {
       opacity: 1,
       ease: "power4.inOut",
       duration: 0.2,
@@ -105,10 +103,12 @@ galleryCards.forEach((card) => {
   });
 
   card.addEventListener("mouseleave", () => {
-    gsap.to(detailsCard, {
+    gsap.to(cardDetails, {
       opacity: 0,
       ease: "power4.inOut",
       duration: 0.4,
     });
   });
+
+  gallerySection.appendChild(card);
 });
