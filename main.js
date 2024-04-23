@@ -34,6 +34,8 @@ sectionSelectorBtns.forEach((btn) => {
   });
 });
 
+document.querySelector("#skills-btn").click();
+
 // * Work cards animation
 const workCards = [...document.querySelectorAll(".work-card")];
 
