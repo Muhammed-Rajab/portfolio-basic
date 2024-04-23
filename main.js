@@ -1,5 +1,6 @@
 import "./style.css";
 import gsap from "gsap";
+import { generateGalleryCard } from "./utils.js";
 
 // * Section selector buttons
 const sectionSelectorBtns = document.querySelectorAll(".section-selector-btn");
@@ -63,7 +64,31 @@ workCards.forEach((card) => {
   });
 });
 
-// * Adding random class to images in gallery
+// * Gallery Card adding
+const gallery = [
+  { url: "/public/gallery/1.jpg", size: "wide", igUrl: "" },
+  { url: "/public/gallery/2.jpg", size: "tall", igUrl: "" },
+  { url: "/public/gallery/3.jpg", size: "big", igUrl: "" },
+  { url: "/public/gallery/4.jpg", size: "tall", igUrl: "" },
+  { url: "/public/gallery/5.jpg", size: "wide", igUrl: "" },
+  { url: "/public/gallery/6.jpg", size: "big", igUrl: "" },
+  { url: "/public/gallery/7.jpg", size: "wide", igUrl: "" },
+  { url: "/public/gallery/8.jpg", size: "big", igUrl: "" },
+  { url: "/public/gallery/9.jpg", size: "tall", igUrl: "" },
+  { url: "/public/gallery/10.jpg", size: "wide", igUrl: "" },
+  { url: "/public/gallery/11.jpg", size: "tall", igUrl: "" },
+  { url: "/public/gallery/12.jpg", size: "big", igUrl: "" },
+  { url: "/public/gallery/13.jpg", size: "tall", igUrl: "" },
+  { url: "/public/gallery/14.jpg", size: "wide", igUrl: "" },
+  { url: "/public/gallery/15.jpg", size: "big", igUrl: "" },
+];
+
+const gallerySection = document.querySelector("#gallery-section");
+
+gallery.forEach((obj) => {
+  const card = generateGalleryCard(obj.url, "wide");
+  gallerySection.appendChild(card);
+});
 
 // * Hover animation to gallery details
 const galleryCards = document.querySelectorAll(".gallery-card");
@@ -83,7 +108,7 @@ galleryCards.forEach((card) => {
     gsap.to(detailsCard, {
       opacity: 0,
       ease: "power4.inOut",
-      duration: 0.2,
+      duration: 0.4,
     });
   });
 });
