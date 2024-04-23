@@ -34,7 +34,7 @@ sectionSelectorBtns.forEach((btn) => {
   });
 });
 
-// document.querySelector("#skills-btn").click();
+document.querySelector("#gallery-btn").click();
 
 // * Work cards animation
 const workCards = [...document.querySelectorAll(".work-card")];
@@ -62,3 +62,8 @@ workCards.forEach((card) => {
     });
   });
 });
+
+// * Adding random class to images in gallery
+const galleryImageDivs = document
+  .querySelector("#gallery-section")
+  .querySelectorAll("div");
