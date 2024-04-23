@@ -34,7 +34,7 @@ sectionSelectorBtns.forEach((btn) => {
   });
 });
 
-// document.querySelector("#gallery-btn").click();
+document.querySelector("#gallery-btn").click();
 
 // * Work cards animation
 const workCards = [...document.querySelectorAll(".work-card")];
@@ -64,6 +64,26 @@ workCards.forEach((card) => {
 });
 
 // * Adding random class to images in gallery
-const galleryImageDivs = document
-  .querySelector("#gallery-section")
-  .querySelectorAll("div");
+
+// * Hover animation to gallery details
+const galleryCards = document.querySelectorAll(".gallery-card");
+
+galleryCards.forEach((card) => {
+  const detailsCard = card.querySelector(".gallery-card-detail");
+
+  card.addEventListener("mouseenter", () => {
+    gsap.to(detailsCard, {
+      opacity: 1,
+      ease: "power4.inOut",
+      duration: 0.2,
+    });
+  });
+
+  card.addEventListener("mouseleave", () => {
+    gsap.to(detailsCard, {
+      opacity: 0,
+      ease: "power4.inOut",
+      duration: 0.2,
+    });
+  });
+});
