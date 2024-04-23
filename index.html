@@ -127,7 +127,8 @@
         class="px-6 p-4 flex gap-x-3 justify-center items-center w-fit rounded-2xl shadow-lg"
       >
         <button
-          class="bg-[#efefef] p-3 px-4 rounded-[200px] text-md font-black flex gap-x-2 victor-mono italic shadow-inner"
+          class="bg-[#efefef] p-3 px-4 rounded-[200px] text-md font-black flex gap-x-2 victor-mono italic shadow-inner section-selector-btn active-section"
+          data-id="works-section"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +142,10 @@
             ></path></svg
           >Works
         </button>
-        <button class="bg-white p-3 rounded flex gap-x-2">
+        <button
+          class="p-3 rounded flex gap-x-2 section-selector-btn"
+          data-id="skills-section"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -154,7 +158,10 @@
             ></path></svg
           >Skills
         </button>
-        <button class="bg-white p-3 rounded flex gap-x-2">
+        <button
+          class="p-3 rounded flex gap-x-2 section-selector-btn"
+          data-id="gallery-section"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -173,6 +180,7 @@
     <!-- ! Works Section -->
     <section
       class="max-w-[1024px] w-full flex px-5 justify-center py-8 justify-evenly gap-3 flex-wrap"
+      id="works-section"
     >
       <!-- Card -->
       <div
@@ -233,6 +241,22 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- ! Skills Section -->
+    <section
+      class="max-w-[1024px] w-full flex px-5 justify-center py-8 justify-evenly gap-3 flex-wrap hidden"
+      id="skills-section"
+    >
+      <h1 class="text-3xl font-bold">Skills Section</h1>
+    </section>
+
+    <!-- ! Gallery Section -->
+    <section
+      class="max-w-[1024px] w-full flex px-5 justify-center py-8 justify-evenly gap-3 flex-wrap hidden"
+      id="gallery-section"
+    >
+      <h1 class="text-3xl font-bold">Gallery Section</h1>
     </section>
     <script type="module" src="/main.js"></script>
   </body>
