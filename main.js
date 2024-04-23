@@ -91,7 +91,11 @@ const gallery = [
 const gallerySection = document.querySelector("#gallery-section");
 
 gallery.forEach((obj) => {
-  const card = generateGalleryCard(obj.url, "wide");
+  const card = generateGalleryCard(
+    obj.url,
+    ["wide", "tall"][Math.floor(Math.random() * 2)]
+  );
+
   const cardDetails = card.querySelector(".gallery-card-detail");
 
   card.addEventListener("mouseenter", () => {

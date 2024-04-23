@@ -1,7 +1,7 @@
 export function generateGalleryCard(imageUrl, size) {
   // Create main container div
   const galleryCard = document.createElement("div");
-  galleryCard.classList.add("rounded-lg", "relative", "gallery-card");
+  galleryCard.classList.add("rounded-lg", "relative", "gallery-card", size);
 
   // Create image element
   const image = document.createElement("img");
