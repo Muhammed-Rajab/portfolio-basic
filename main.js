@@ -1,6 +1,6 @@
 import "./style.css";
 import gsap from "gsap";
-import { generateGalleryCard } from "./utils.js";
+import { createWorkCard, generateGalleryCard } from "./utils.js";
 
 // * Section selector buttons
 const sectionSelectorBtns = document.querySelectorAll(".section-selector-btn");
@@ -40,31 +40,145 @@ document.querySelector("#works-btn").click();
 /*******************
  * * WORK SECTION
  *******************/
-const workCards = [...document.querySelectorAll(".work-card")];
+const worksSection = document.querySelector("#works-section");
 
-workCards.forEach((card) => {
-  const details = card.querySelector(".work-card-details");
+const works = [
+  {
+    imgUrl: "/public/gallery/9.jpg",
+    title: "Encrypto 🔒",
+    stack: ["Node", "Electron"],
+    desc: "Encrypto is a secure messaging application built using Node.js and Electron.",
+    links: {
+      yt: "",
+      live: "",
+      github: "",
+    },
+  },
+  {
+    imgUrl: "/public/gallery/10.jpg",
+    title: "Ecommerce Website",
+    stack: ["React", "Node.js", "MongoDB"],
+    desc: "An online shopping platform with features like product browsing, cart management, and payment processing.",
+    links: {
+      yt: "",
+      live: "",
+      github: "",
+    },
+  },
+  {
+    imgUrl: "/public/gallery/11.jpg",
+    title: "Portfolio Website",
+    stack: ["HTML", "CSS", "JavaScript"],
+    desc: "A personal portfolio website showcasing projects, skills, and contact information.",
+    links: {
+      yt: "",
+      live: "",
+      github: "",
+    },
+  },
+  {
+    imgUrl: "/public/gallery/12.jpg",
+    title: "Social Media App",
+    stack: ["React", "Firebase"],
+    desc: "A social media platform for users to share posts, connect with friends, and explore trending topics.",
+    links: {
+      yt: "",
+      live: "",
+      github: "",
+    },
+  },
+  {
+    imgUrl: "/public/gallery/13.jpg",
+    title: "Weather App",
+    stack: ["Vue.js", "OpenWeatherMap API"],
+    desc: "A weather forecasting application that provides current weather information and forecasts for different locations.",
+    links: {
+      yt: "",
+      live: "",
+      github: "",
+    },
+  },
+  {
+    imgUrl: "/public/gallery/14.jpg",
+    title: "Task Manager",
+    stack: ["Angular", "Node.js", "MongoDB"],
+    desc: "A task management application to organize tasks, set deadlines, and track progress.",
+    links: {
+      yt: "",
+      live: "",
+      github: "",
+    },
+  },
+  {
+    imgUrl: "/public/gallery/15.jpg",
+    title: "Recipe App",
+    stack: ["React", "Redux", "Edamam API"],
+    desc: "An application for discovering and saving recipes, with filtering options based on ingredients and dietary restrictions.",
+    links: {
+      yt: "",
+      live: "",
+      github: "",
+    },
+  },
+  {
+    imgUrl: "/public/gallery/9.jpg",
+    title: "Fitness Tracker",
+    stack: ["React Native", "Expo", "Firebase"],
+    desc: "A mobile app for tracking fitness activities, setting goals, and monitoring progress.",
+    links: {
+      yt: "",
+      live: "",
+      github: "",
+    },
+  },
+  {
+    imgUrl: "/public/gallery/12.jpg",
+    title: "Blog Website",
+    stack: ["Django", "SQLite"],
+    desc: "A blog platform for publishing articles, managing comments, and user authentication.",
+    links: {
+      yt: "",
+      live: "",
+      github: "",
+    },
+  },
+];
 
-  // card.addEventListener("mouseenter", () => {
-  //   gsap.fromTo(
-  //     details,
-  //     {
-  //       opacity: 0,
-  //       duration: 0.75,
-  //       ease: "power4.inOut",
-  //     },
-  //     { bottom: 0, opacity: 1 }
-  //   );
-  // });
+works.forEach((work) => {
+  const card = createWorkCard(
+    work.title,
+    work.desc,
+    work.stack,
+    work.links,
+    work.imgUrl
+  );
 
-  // card.addEventListener("mouseleave", () => {
-  //   gsap.to(details, {
-  //     opacity: 0,
-  //     duration: 0.75,
-  //     ease: "power4.inOut",
-  //   });
-  // });
+  worksSection.appendChild(card);
 });
+
+// workCards.forEach((card) => {
+//   const details = card.querySelector(".work-card-details");
+
+//   // card.addEventListener("mouseenter", () => {
+//   //   gsap.fromTo(
+//   //     details,
+//   //     {
+//   //       opacity: 0,
+//   //       duration: 0.75,
+//   //       ease: "power4.inOut",
+//   //     },
+//   //     { bottom: 0, opacity: 1 }
+//   //   );
+//   // });
+
+//   // card.addEventListener("mouseleave", () => {
+//   //   gsap.to(details, {
+//   //     opacity: 0,
+//   //     duration: 0.75,
+//   //     ease: "power4.inOut",
+//   //   });
+//   // });
+// });
 
 /*******************
  * * GALLERY SECTION
