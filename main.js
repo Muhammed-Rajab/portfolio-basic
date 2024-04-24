@@ -154,31 +154,31 @@ works.forEach((work) => {
   );
 
   worksSection.appendChild(card);
+
+  // * Animation
+  const img = card.querySelector("img");
+  const details = card.querySelector(".work-card-details");
+
+  card.addEventListener("mouseenter", () => {
+    gsap.fromTo(
+      details,
+      {
+        opacity: 0,
+        duration: 0.4,
+        ease: "power4.inOut",
+      },
+      { bottom: 0, opacity: 1 }
+    );
+  });
+
+  card.addEventListener("mouseleave", () => {
+    gsap.to(details, {
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.inOut",
+    });
+  });
 });
-
-// workCards.forEach((card) => {
-//   const details = card.querySelector(".work-card-details");
-
-//   // card.addEventListener("mouseenter", () => {
-//   //   gsap.fromTo(
-//   //     details,
-//   //     {
-//   //       opacity: 0,
-//   //       duration: 0.75,
-//   //       ease: "power4.inOut",
-//   //     },
-//   //     { bottom: 0, opacity: 1 }
-//   //   );
-//   // });
-
-//   // card.addEventListener("mouseleave", () => {
-//   //   gsap.to(details, {
-//   //     opacity: 0,
-//   //     duration: 0.75,
-//   //     ease: "power4.inOut",
-//   //   });
-//   // });
-// });
 
 /*******************
  * * GALLERY SECTION

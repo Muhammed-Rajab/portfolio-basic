@@ -100,12 +100,13 @@ export function createWorkCard(
     "left-0",
     "w-full",
     "h-fit",
-    "bg-[#ffffffeb]",
-    "backdrop-blur-[2px]",
+    "bg-[#ffffffef]",
+    "backdrop-blur-[100px]",
     "p-3",
     "rounded-lg",
     "work-card-details",
-    "opacity-1"
+    "opacity-0",
+    "justify-end"
   );
 
   // Add title
