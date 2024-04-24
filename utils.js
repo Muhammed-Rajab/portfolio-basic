@@ -146,7 +146,9 @@ export function createWorkCard(
   // Add buttons
   const buttonsDiv = document.createElement("div");
   buttonsDiv.classList.add("mt-3", "flex", "justify-end", "gap-x-2");
-  const button1 = document.createElement("button");
+
+  const button1 = document.createElement("a");
+  button1.href = links.live;
   button1.classList.add("p-2");
   const svg1 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg1.setAttribute("xmlns", "http://www.w3.org/2000/svg");
@@ -162,7 +164,9 @@ export function createWorkCard(
   svg1.appendChild(path1);
   button1.appendChild(svg1);
   buttonsDiv.appendChild(button1);
-  const button2 = document.createElement("button");
+
+  const button2 = document.createElement("a");
+  button2.href = links.yt;
   button2.classList.add("p-2");
   const svg2 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg2.setAttribute("xmlns", "http://www.w3.org/2000/svg");
@@ -178,7 +182,9 @@ export function createWorkCard(
   svg2.appendChild(path2);
   button2.appendChild(svg2);
   buttonsDiv.appendChild(button2);
-  const button3 = document.createElement("button");
+
+  const button3 = document.createElement("a");
+  button3.href = links.github;
   button3.classList.add("p-2");
   const svg3 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg3.setAttribute("xmlns", "http://www.w3.org/2000/svg");
