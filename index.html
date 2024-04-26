@@ -8,6 +8,31 @@
 
     <!-- ! SCRIPTS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ! STYLES -->
+    <style>
+      .gradient-text {
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .rainbow-gradient {
+        background-image: linear-gradient(
+          90deg,
+          rgba(255, 0, 0, 1) 0%,
+          rgba(255, 154, 0, 1) 10%,
+          rgba(208, 222, 33, 1) 20%,
+          rgba(79, 220, 74, 1) 30%,
+          rgba(63, 218, 216, 1) 40%,
+          rgba(47, 201, 226, 1) 50%,
+          rgba(28, 127, 238, 1) 60%,
+          rgba(95, 21, 242, 1) 70%,
+          rgba(186, 12, 248, 1) 80%,
+          rgba(251, 7, 217, 1) 90%,
+          rgba(255, 0, 0, 1) 100%
+        );
+      }
+    </style>
   </head>
   <body class="box-border flex flex-col items-center jetbrains-mono">
     <!-- ! Navbar -->
@@ -78,14 +103,20 @@
     <header
       class="sm:max-w-[500px] md:max-w-[768px] lg:max-w-[1024px] w-full flex flex-col px-5 justify-center"
     >
-      <p class="text-4xl text-center flex flex-col gap-y-3">
+      <p class="text-4xl text-center flex flex-col gap-y-3 items-center">
         <span class="text-sm">Hi 👋, I am</span>
         <span class="font-bold text-5xl victor-mono italic"
           >✨Rajab Kabeer✨</span
         >
-        <span class="text-[1.1rem] mt-1 victor-mono italic"
-          >With The Alchemy of
-          <span class="italic font-black text-black">&lt;Code/&gt;</span>
+        <img
+          src="https://placehold.co/480x600"
+          alt=""
+          class="h-[300px] mt-8 mb-5 w-fit"
+        />
+        <span class="text-[1.01rem] font-black mt-1 victor-mono italic"
+          ><span class="bg-[#f0db4f] text-[#323330] p-1">Web Developer</span>
+          <span class="not-italic">|</span>
+          <span class="gradient-text rainbow-gradient">Creative Coder</span>
         </span>
       </p>
 
