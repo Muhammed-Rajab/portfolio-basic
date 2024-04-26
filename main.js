@@ -1,6 +1,11 @@
 import "./style.css";
 import gsap from "gsap";
 import { createWorkCard, generateGalleryCard } from "./utils.js";
+import { wavyText } from "./src/animation.js";
+
+// * Header section
+const nameSpan = document.querySelector("#name-span");
+wavyText(nameSpan);
 
 // * Section selector buttons
 const sectionSelectorBtns = document.querySelectorAll(".section-selector-btn");
