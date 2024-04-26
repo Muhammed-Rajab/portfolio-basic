@@ -2,6 +2,7 @@ import "./style.css";
 import gsap from "gsap";
 import { createWorkCard, generateGalleryCard } from "./utils.js";
 import { wavyText } from "./src/animation.js";
+import "./src/dark-theme.js";
 
 // * Header section
 const nameSpan = document.querySelector("#name-span");
