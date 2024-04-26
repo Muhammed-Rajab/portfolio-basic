@@ -19,11 +19,12 @@ export function wavyText(parent) {
   for (const [i, el] of characters.entries()) {
     gsap.to(el, {
       y: -10,
+      scale: 0.8,
       delay: i * 0.05,
       ease: "power4.inOut",
       duration: 0.1,
       onComplete: () => {
-        gsap.to(el, { y: 0, delay: i * 0.01 });
+        gsap.to(el, { y: 0, scale: 1, delay: i * 0.01 });
       },
     });
   }
