@@ -23,6 +23,8 @@ sectionSelectorBtns.forEach((btn) => {
     "rounded-[200px]",
     "active-section",
     "font-black",
+    "text-white",
+    "dark:text-black",
   ];
 
   btn.addEventListener("click", (e) => {
