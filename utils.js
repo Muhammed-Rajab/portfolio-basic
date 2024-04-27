@@ -77,7 +77,8 @@ export function createWorkCard(
     "flex",
     "flex-col",
     "shadow-md",
-    "w-[300px]",
+    "w-full",
+    "md:w-[300px]",
     "rounded-lg",
     "relative",
     "work-card"
@@ -96,7 +97,7 @@ export function createWorkCard(
   detailsDiv.classList.add(
     "flex",
     "flex-col",
-    "w-[300px]",
+    "w-full",
     "absolute",
     "bottom-0",
     "left-0",
