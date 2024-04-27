@@ -44,7 +44,7 @@ sectionSelectorBtns.forEach((btn) => {
   });
 });
 
-document.querySelector("#skills-btn").click();
+document.querySelector("#works-btn").click();
 
 /*******************
  * * WORK SECTION

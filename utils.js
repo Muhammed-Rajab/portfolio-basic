@@ -103,6 +103,9 @@ export function createWorkCard(
     "w-full",
     "h-fit",
     "bg-[#ffffffef]",
+    "dark:bg-[#0000005d]",
+    "text-black",
+    "dark:text-white",
     "backdrop-blur-[100px]",
     "p-3",
     "rounded-lg",
@@ -126,7 +129,13 @@ export function createWorkCard(
   stack.forEach((tech) => {
     const tag = document.createElement("span");
     tag.textContent = tech;
-    tag.classList.add("text-xs", "font-semibold", "text-[#ababab]");
+    tag.classList.add(
+      "text-xs",
+      "font-semibold",
+      "text-[#ababab]",
+      "dark:text-[#bdbdbd]",
+      "uppercase"
+    );
     tagsDiv.appendChild(tag);
   });
 
@@ -140,6 +149,7 @@ export function createWorkCard(
     "text-sm",
     "mt-1",
     "text-[#2e2e2e]",
+    "dark:text-[#efefef]",
     "w-200",
     "work-card-desc"
   );
