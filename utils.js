@@ -38,7 +38,9 @@ export function generateGalleryCard(imageUrl, size) {
     "victor-mono",
     "p-3",
     "bg-white",
-    "rounded-full"
+    "rounded-full",
+    "dark:bg-black",
+    "dark:text-white"
   );
   detailsDiv.appendChild(link);
 
