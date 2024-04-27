@@ -68,3 +68,9 @@
 #gallery-btn {
   transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+#skills-section li {
+  /* border: 2px solid black; */
+  border-radius: 6px;
+  padding: 5px 7px;
+}
